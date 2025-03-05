@@ -1,0 +1,97 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Choose a friendly font */
+    background-color: #f4f4f4; /* Light background color for better contrast */
+    color: #333; /* Darker text color for readability */
+    line-height: 1.6; /* Improve text readability */
+}
+
+/* Header styles */
+header {
+    background-color: #3B8C9B; /* Teal color for header */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around the header */
+    text-align: center; /* Centered text */
+}
+
+nav {
+    margin-top: 10px; /* Space between heading and navigation */
+}
+
+nav ul {
+    list-style: none; /* Remove default bullet points */
+}
+
+nav ul li {
+    display: inline; /* Inline list items for horizontal alignment */
+    margin: 0 15px; /* Spacing between links */
+}
+
+nav ul li a {
+    color: #fff; /* White color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #F4B400; /* Change color on hover */
+}
+
+/* Main content styles */
+main {
+    padding: 20px; /* Padding around main content */
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px; /* Space between sections */
+    background: #fff; /* White background for sections */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside each section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+h2, h3 {
+    color: #3B8C9B; /* Use primary color for headings */
+}
+
+/* Input styles */
+input[type="text"] {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside the input */
+    margin-top: 10px; /* Space above */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer styles */
+footer {
+    background-color: #3B8C9B; /* Teal color for footer */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Padding */
+    position: relative; /* Fix footer position */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    /* For mobile devices */
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0; /* Space between items */
+    }
+    
+    input[type="text"] {
+        font-size: 16px; /* Slightly larger text for input */
+    }
+    
+    main {
+        padding: 10px; /* Less padding for smaller screens */
+    }
+}
