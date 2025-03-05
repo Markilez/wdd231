@@ -1,49 +1,59 @@
-// JavaScript for Mosiya Tunya Chamber of Commerce
-
-// Sample data for businesses
-const businesses = [
-    { name: "Zambezi Adventures", type: "Tourism" },
-    { name: "Livingstone Lodge", type: "Hospitality" },
-    { name: "Victoria Falls Crafts", type: "Retail" },
-    { name: "Mosi Brewery", type: "Manufacturing" },
-    { name: "Tunga Transport", type: "Logistics" },
+// Sample data for courses
+const courses = [
+    { name: "Web Development", credits: 3, completed: false },
+    { name: "Data Structures", credits: 4, completed: true },
+    { name: "Programming with classes", credits: 4, completed: false },
+    { name: "Introduction to Database Systems", credits: 3, completed: true },
+    { name: "Software Testing ", credits: 4, completed: false },
 ];
 
-// Function to dynamically load businesses into the course-list section
-function loadBusinesses() {
+// Function to dynamically load courses into the course-list section
+function loadCourses() {
     const courseList = document.getElementById("course-list").querySelector("div");
     courseList.innerHTML = ""; // Clear existing content
 
-    businesses.forEach(business => {
-        const businessDiv = document.createElement("div");
-        businessDiv.className = "business-item";
-        businessDiv.innerHTML = `<strong>${business.name}</strong> - ${business.type}`;
-        courseList.appendChild(businessDiv);
+    courses.forEach(course => {
+        const courseDiv = document.createElement("div");
+        courseDiv.className = "business-item";
+        courseDiv.innerHTML = `<strong>${course.name}</strong> - ${course.credits} credits`;
+        if (course.completed) {
+            courseDiv.classList.add("completed");
+        }
+        courseList.appendChild(courseDiv);
     });
 
-    // Update the total business count
-    document.getElementById("credits-count").textContent = businesses.length;
+    // Update the total credits count
+    updateCredits();
 }
 
-// Function to filter businesses by name
-function filterBusinesses() {
+// Function to filter courses by name
+function filterCourses() {
     const filterInput = document.getElementById("filter-input").value.toLowerCase();
-    const filteredBusinesses = businesses.filter(business => 
-        business.name.toLowerCase().includes(filterInput)
+    const filteredCourses = courses.filter(course => 
+        course.name.toLowerCase().includes(filterInput)
     );
 
     const courseList = document.getElementById("course-list").querySelector("div");
     courseList.innerHTML = ""; // Clear existing content
 
-    filteredBusinesses.forEach(business => {
-        const businessDiv = document.createElement("div");
-        businessDiv.className = "business-item";
-        businessDiv.innerHTML = `<strong>${business.name}</strong> - ${business.type}`;
-        courseList.appendChild(businessDiv);
+    filteredCourses.forEach(course => {
+        const courseDiv = document.createElement("div");
+        courseDiv.className = "business-item";
+        courseDiv.innerHTML = `<strong>${course.name}</strong> - ${course.credits} credits`;
+        if (course.completed) {
+            courseDiv.classList.add("completed");
+        }
+        courseList.appendChild(courseDiv);
     });
 
-    // Update the total business count
-    document.getElementById("credits-count").textContent = filteredBusinesses.length;
+    // Update the total credits count
+    updateCredits();
+}
+
+// Function to update the total credits count
+function updateCredits() {
+    const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
+    document.getElementById("credits-count").textContent = totalCredits;
 }
 
 // Function to update the footer with the current year and last modified date
@@ -56,10 +66,10 @@ function updateFooter() {
 }
 
 // Event listeners
-document.getElementById("filter-input").addEventListener("input", filterBusinesses);
+document.getElementById("filter-input").addEventListener("input", filterCourses);
 
 // Initial load
 document.addEventListener("DOMContentLoaded", () => {
-    loadBusinesses();
+    loadCourses();
     updateFooter();
 });
