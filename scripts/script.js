@@ -1,49 +1,65 @@
-// Sample array of course objects
-const courses = [
-    { name: "HTML Basics", credits: 3, completed: false },
-    { name: "CSS Fundamentals", credits: 3, completed: false },
-    { name: "JavaScript Essentials", credits: 4, completed: true },
-    // Add more courses as needed
+// JavaScript for Mosiya Tunya Chamber of Commerce
+
+// Sample data for businesses
+const businesses = [
+    { name: "Zambezi Adventures", type: "Tourism" },
+    { name: "Livingstone Lodge", type: "Hospitality" },
+    { name: "Victoria Falls Crafts", type: "Retail" },
+    { name: "Mosi Brewery", type: "Manufacturing" },
+    { name: "Tunga Transport", type: "Logistics" },
 ];
 
-window.onload = () => {
-    displayCourses();
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    document.getElementById('last-modified').textContent = document.lastModified;
+// Function to dynamically load businesses into the course-list section
+function loadBusinesses() {
+    const courseList = document.getElementById("course-list").querySelector("div");
+    courseList.innerHTML = ""; // Clear existing content
 
-    document.getElementById('filter-input').addEventListener('input', filterCourses);
-};
-
-function displayCourses() {
-    const courseList = document.getElementById('course-list').querySelector('div');
-    courseList.innerHTML = '';
-    courses.forEach(course => {
-        const item = document.createElement('div');
-        item.textContent = course.name;
-        courseList.appendChild(item);
-        
-        // Show completed courses
-        if (course.completed) {
-            const completedItem = document.createElement('li');
-            completedItem.textContent = course.name;
-            document.getElementById('completed-list').appendChild(completedItem);
-        }
+    businesses.forEach(business => {
+        const businessDiv = document.createElement("div");
+        businessDiv.className = "business-item";
+        businessDiv.innerHTML = `<strong>${business.name}</strong> - ${business.type}`;
+        courseList.appendChild(businessDiv);
     });
 
-    calculateTotalCredits();
+    // Update the total business count
+    document.getElementById("credits-count").textContent = businesses.length;
 }
 
-function filterCourses() {
-    const filterValue = document.getElementById('filter-input').value.toLowerCase();
-    const courseList = document.getElementById('course-list').querySelector('div');
-    const items = courseList.children;
+// Function to filter businesses by name
+function filterBusinesses() {
+    const filterInput = document.getElementById("filter-input").value.toLowerCase();
+    const filteredBusinesses = businesses.filter(business => 
+        business.name.toLowerCase().includes(filterInput)
+    );
 
-    for (let item of items) {
-        item.style.display = item.textContent.toLowerCase().includes(filterValue) ? 'block' : 'none';
-    }
+    const courseList = document.getElementById("course-list").querySelector("div");
+    courseList.innerHTML = ""; // Clear existing content
+
+    filteredBusinesses.forEach(business => {
+        const businessDiv = document.createElement("div");
+        businessDiv.className = "business-item";
+        businessDiv.innerHTML = `<strong>${business.name}</strong> - ${business.type}`;
+        courseList.appendChild(businessDiv);
+    });
+
+    // Update the total business count
+    document.getElementById("credits-count").textContent = filteredBusinesses.length;
 }
 
-function calculateTotalCredits() {
-    const totalCredits = courses.reduce((sum, course) => sum + (course.completed ? course.credits : 0), 0);
-    document.getElementById('credits-count').textContent = totalCredits;
+// Function to update the footer with the current year and last modified date
+function updateFooter() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById("current-year").textContent = currentYear;
+
+    const lastModified = document.lastModified;
+    document.getElementById("last-modified").textContent = lastModified;
 }
+
+// Event listeners
+document.getElementById("filter-input").addEventListener("input", filterBusinesses);
+
+// Initial load
+document.addEventListener("DOMContentLoaded", () => {
+    loadBusinesses();
+    updateFooter();
+});
