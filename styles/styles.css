@@ -1,3 +1,57 @@
+/* Profile Image Styling */
+.profile-photo {
+    width: 150px; /* Set width to 150px */
+    height: 150px; /* Set height to 150px */
+    border-radius: 50%; /* Make the image circular */
+    border: 3px solid #fff; /* Add a white border */
+    margin-bottom: 10px; /* Space below the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Header Layout */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+header h1 span {
+    font-weight: bold;
+    color: #ff6347; /* Highlight the name */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Add hover effect */
+}
+
 /* Basic Reset */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
