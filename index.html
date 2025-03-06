@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course Home Page for WDD 231 - Web Frontend Development. Created by [Your Name].">
-    <meta name="author" content="[Your Name]">
-    <title>[Your Name] - Course Home Page</title>
+    <meta name="description" content="Course Home Page for WDD 231 - Web Frontend Development. Created by Maclarence Makomo.">
+    <meta name="author" content="Maclarence Makomo">
+    <title>Maclarence Makomo - Course Home Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -14,13 +14,15 @@
 </head>
 <body>
     <header>
-        <h1>Maclarence Makomo - Course Home Page</h1>
+        <img src="images/profile.jpg" alt="Maclarence Makomo" class="profile-photo">
+        <h1><span>Maclarence Makomo</span> - Course Home Page</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+            <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="https://github.com/markilez">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/maclarence-makomo-2461331a0/">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +30,7 @@
     <main>
         <section id="course-list">
             <h2>Available Courses</h2>
-            <div>
+            <div id="courses-container">
                 <!-- Courses will be dynamically inserted here using JavaScript -->
             </div>
         </section>
@@ -36,6 +38,11 @@
         <section id="course-filter">
             <h3>Filter Courses</h3>
             <input type="text" id="filter-input" placeholder="Filter by course name...">
+            <div class="filter-buttons">
+                <button id="all-courses">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+            </div>
         </section>
 
         <section id="total-credits">
@@ -50,7 +57,7 @@
     </main>
 
     <footer>
-        <p>&copy;<span id="current-year"></span> Maclarence Makomo - Course Home Page. Last modified: <span id="last-modified"></span></p>
+        <p>&copy;<span id="current-year"></span> Maclarence Makomo - Zimbabwe. Last modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 </html>
