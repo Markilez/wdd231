@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
     background-color: #f4f4f4;
@@ -22,16 +22,22 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Add hover effect */
 }
 
 main {
@@ -53,6 +59,12 @@ section {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -61,4 +73,13 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
+}
+
+/* Pseudo-classes and Pseudo-elements */
+a:focus {
+    outline: 2px solid #ff6347;
+}
+
+p::first-line {
+    font-weight: bold;
 }
