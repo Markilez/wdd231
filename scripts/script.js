@@ -1,15 +1,15 @@
 // Sample data for courses
 const courses = [
-    { name: "Web Development", credits: 3, completed: false },
-    { name: "Data Structures", credits: 4, completed: true },
-    { name: "Programming with classes", credits: 4, completed: false },
-    { name: "Introduction to Database Systems", credits: 3, completed: true },
-    { name: "Software Testing ", credits: 4, completed: false },
+    { name: "CSE 110", credits: 3, completed: true },
+    { name: "CSE 111", credits: 4, completed: true },
+    { name: "WDD 130", credits: 4, completed: false },
+    { name: "WDD 131", credits: 3, completed: true },
+    { name: "WDD 231", credits: 4, completed: false },
 ];
 
 // Function to dynamically load courses into the course-list section
 function loadCourses() {
-    const courseList = document.getElementById("course-list").querySelector("div");
+    const courseList = document.getElementById("courses-container");
     courseList.innerHTML = ""; // Clear existing content
 
     courses.forEach(course => {
@@ -33,7 +33,7 @@ function filterCourses() {
         course.name.toLowerCase().includes(filterInput)
     );
 
-    const courseList = document.getElementById("course-list").querySelector("div");
+    const courseList = document.getElementById("courses-container");
     courseList.innerHTML = ""; // Clear existing content
 
     filteredCourses.forEach(course => {
