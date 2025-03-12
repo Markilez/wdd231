@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Hybrid Motors Africa",
+    "address": "123 Chihombe St, Harare, Zimbabwe",
+    "phone": "123-456-7890",
+    "website": "https://hybridmotorsafrica.com/",
+    "image": "images/hybrid.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "ZIMSAKE LEARNING INSTITUTE",
+    "address": "456 Nelson Mandela St, Harare, Zimbabwe",
+    "phone": "987-654-3210",
+    "website": "https://zimsake.co.zw",
+    "image": "images/zimsake.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Bindura Nickel Corporation",
+    "address": "M78M+QF6, Trojan Road, Bindura, Zimbabwe",
+    "phone": "086-678-457",
+    "website": "https://binduranickel.co.zw",
+    "image": "images/bindura.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Zimtech",
+    "address": "3457 Kandembiri St, Chegato, Chegutu, Zimbabwe",
+    "phone": "0776887356",
+    "website": "https://www.zimttech.org/",
+    "image": "images/zimtech.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Zimbabwe Energy Regulatory Authority",
+    "address": "ZERA House, 11 Beach Road, Belvedere, Harare, Zimbabwe",
+    "phone": "024-225-0450",
+    "website": "https://www.zera.co.zw/",
+    "image": "images/zera.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Zimbabwe Electricity Transmission and Distribution Company",
+    "address": "ZETDC House, 11th Floor, 25 Samora Machel Avenue, Harare, Zimbabwe",
+    "phone": "024-225-0450",
+    "website": "https://www.zetdc.co.zw/",
+    "image": "images/zetdc.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Zimbabwe Energy Workers Union",
+    "address": "ZEWU House, 25 Samora Machel Avenue, Harare, Zimbabwe",
+    "phone": "024-225-0450",
+    "website": "https://www.zewu.co.zw/",
+    "image": "images/zewu.png",
+    "membershipLevel": 1
+  }
+
+]
