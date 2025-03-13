@@ -4,7 +4,7 @@
     "address": "123 Chihombe St, Harare, Zimbabwe",
     "phone": "123-456-7890",
     "website": "https://hybridmotorsafrica.com/",
-    "image": "images/hybrid.png",
+    "image": "images/hybrid.webp",
     "membershipLevel": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "456 Nelson Mandela St, Harare, Zimbabwe",
     "phone": "987-654-3210",
     "website": "https://zimsake.co.zw",
-    "image": "images/zimsake.png",
+    "image": "images/zimsake.webp",
     "membershipLevel": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "M78M+QF6, Trojan Road, Bindura, Zimbabwe",
     "phone": "086-678-457",
     "website": "https://binduranickel.co.zw",
-    "image": "images/bindura.png",
+    "image": "images/bindura.webp",
     "membershipLevel": 3
   },
   {
@@ -28,7 +28,7 @@
     "address": "3457 Kandembiri St, Chegato, Chegutu, Zimbabwe",
     "phone": "0776887356",
     "website": "https://www.zimttech.org/",
-    "image": "images/zimtech.png",
+    "image": "images/zimtech.webp",
     "membershipLevel": 2
   },
   {
@@ -36,7 +36,7 @@
     "address": "ZERA House, 11 Beach Road, Belvedere, Harare, Zimbabwe",
     "phone": "024-225-0450",
     "website": "https://www.zera.co.zw/",
-    "image": "images/zera.png",
+    "image": "images/zera.webp",
     "membershipLevel": 2
   },
   {
@@ -44,7 +44,7 @@
     "address": "ZETDC House, 11th Floor, 25 Samora Machel Avenue, Harare, Zimbabwe",
     "phone": "024-225-0450",
     "website": "https://www.zetdc.co.zw/",
-    "image": "images/zetdc.png",
+    "image": "images/zetdc.webp",
     "membershipLevel": 1
   },
   {
@@ -52,7 +52,7 @@
     "address": "ZEWU House, 25 Samora Machel Avenue, Harare, Zimbabwe",
     "phone": "024-225-0450",
     "website": "https://www.zewu.co.zw/",
-    "image": "images/zewu.png",
+    "image": "images/zewu.webp",
     "membershipLevel": 1
   }
 
