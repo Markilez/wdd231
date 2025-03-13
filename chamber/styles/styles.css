@@ -104,8 +104,8 @@ h2 {
 }
 
 .member-card img {
-  max-width: 100px;
-  height: auto;
+  width: 100px; /* Set fixed width */
+  height: 60px; /* Set fixed height */
   margin-bottom: 15px;
 }
 
