@@ -9,14 +9,14 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333; /* Dark text for better contrast */
-  background-color: #f9f9f9; /* Light background */
+  color: #2c2c2c; /* Darker text for better contrast */
+  background-color: #ffffff; /* Pure white background */
   padding: 20px;
 }
 
 header, footer {
-  background-color: #2c3e50; /* Dark background */
-  color: #ffffff; /* Light text for contrast */
+  background-color: #1a1a1a; /* Darker background */
+  color: #e0e0e0; /* Light gray text for contrast */
   padding: 20px;
   text-align: center;
 }
@@ -35,12 +35,13 @@ nav ul {
 }
 
 nav ul li a {
-  color: #ffffff; /* White text for links */
+  color: #e0e0e0; /* Light gray text for links */
   text-decoration: underline; /* Underline for links */
   font-weight: bold;
 }
 
 nav ul li a:hover {
+  color: #ffffff; /* Light white for hover effect */
   text-decoration: underline; /* Keep underline on hover */
 }
 
@@ -49,7 +50,7 @@ main {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #ffffff; /* White background for main content */
+  background-color: #f4f4f4; /* Very light gray background for main content */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -57,7 +58,7 @@ main {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #2c3e50; /* Dark color for headings */
+  color: #1a1a1a; /* Dark color for headings */
 }
 
 /* View Toggle Buttons */
@@ -72,7 +73,7 @@ h2 {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #3498db; /* Button color */
+  background-color: #007BFF; /* Button color */
   color: #ffffff; /* White text for buttons */
   cursor: pointer;
   font-size: 1rem;
@@ -80,7 +81,7 @@ h2 {
 }
 
 #view-toggle button:hover {
-  background-color: #2980b9; /* Darker shade on hover */
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 /* Member Cards */
@@ -91,7 +92,7 @@ h2 {
 }
 
 .member-card {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc; /* Using a lighter gray for borders */
   padding: 20px;
   border-radius: 8px;
   background-color: #ffffff; /* White background for cards */
@@ -101,7 +102,7 @@ h2 {
 
 .member-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly heavier shadow on hover */
 }
 
 .member-card img {
@@ -113,21 +114,21 @@ h2 {
 .member-card h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: #2c3e50; /* Dark color for headings */
+  color: #1a1a1a; /* Dark color for headings */
 }
 
 .member-card p {
   margin: 5px 0;
-  color: #555; /* Medium gray for text */
+  color: #666666; /* Darker gray for text */
 }
 
 .member-card a {
-  color: #3498db; /* Button color for links */
+  color: #007BFF; /* Button color for links */
   text-decoration: underline; /* Underline for links */
 }
 
 .member-card a:hover {
-  color: #2980b9; /* Darker shade on hover */
+  color: #0056b3; /* Darker shade on hover */
 }
 
 /* List View */
@@ -153,12 +154,12 @@ footer p {
 }
 
 footer a {
-  color: #3498db; /* Button color for footer links */
+  color: #007BFF; /* Button color for footer links */
   text-decoration: underline; /* Underline for footer links */
 }
 
 footer a:hover {
-  color: #2980b9; /* Darker shade on hover */
+  color: #0056b3; /* Darker shade on hover */
 }
 
 /* Responsive Design */
