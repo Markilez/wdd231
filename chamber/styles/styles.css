@@ -9,14 +9,14 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #2c2c2c; /* Darker text for better contrast */
+  color: #000000; /* Pure black for better contrast */
   background-color: #ffffff; /* Pure white background */
   padding: 20px;
 }
 
 header, footer {
   background-color: #1a1a1a; /* Darker background */
-  color: #e0e0e0; /* Light gray text for contrast */
+  color: #b0b0b0; /* Changed to a darker gray for better contrast */
   padding: 20px;
   text-align: center;
 }
@@ -35,7 +35,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #e0e0e0; /* Light gray text for links */
+  color: #b0b0b0; /* Darker gray for links */
   text-decoration: underline; /* Underline for links */
   font-weight: bold;
 }
@@ -119,7 +119,7 @@ h2 {
 
 .member-card p {
   margin: 5px 0;
-  color: #666666; /* Darker gray for text */
+  color: #333333; /* Changed to darker gray for better visibility */
 }
 
 .member-card a {
