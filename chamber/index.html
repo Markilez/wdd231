@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mosi A Tunya Chamber Of Commerce Home Page for WDD 231">
+  <meta name="author" content="Maclarence Makomo">
+  <title>Home | Mosi A Tunya Chamber Of Commerce</title>
+  
+  <!-- Preload key resources -->
+  <link rel="preload" href="images/logo.webp" as="image">
+  <link rel="preload" href="styles/normalize.css" as="style">
+  <link rel="preload" href="styles/styles.css" as="style">
+  
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="Mosi A Tunya Chamber of Commerce">
+  <meta property="og:site_name" content="Mosi A Tunya Chamber">
+  <meta property="og:url" content="https://markilez.github.io/wdd231/chamber/index.html">
+  <meta property="og:description" content="Mosi A Tunya Chamber of Commerce home page, connecting local businesses and fostering community growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://markilez.github.io/wdd231/chamber/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="site-branding">
+      <img src="images/logo.webp" alt="Chamber Logo" width="120" height="60">
+      <p>Mosi A Tunya Chamber of Commerce</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <img src="images/hero.webp" alt="Chamber Hero Image">
+      <div class="cta">
+        <a href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events Section -->
+    <section id="current-events">
+      <h2>Current Events</h2>
+      <p>Join us for our annual business expo on March 25, 2025!</p>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather">
+      <h2>Weather</h2>
+      <div id="weather-data">
+        <p>Loading weather data...</p>
+      </div>
+    </section>
+
+    <!-- Member Spotlights Section -->
+    <section id="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; <span id="copyright-year"></span> | Maclarence Makomo | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="scripts/script.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</body>
+</html>
