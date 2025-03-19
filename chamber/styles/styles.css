@@ -9,8 +9,8 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #000000; /* Pure black for better contrast */
-  background-color: #ffffff; /* Pure white background */
+  color: #000; /* Pure black for better contrast */
+  background-color: #fff; /* Pure white background */
   padding: 20px;
 }
 
@@ -41,8 +41,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffffff; /* Light white for hover effect */
-  text-decoration: underline; /* Keep underline on hover */
+  color: #fff; /* Light white for hover effect */
 }
 
 /* Main Content */
@@ -136,7 +135,7 @@ h2 {
   border: none;
   border-radius: 4px;
   background-color: #007BFF; /* Button color */
-  color: #ffffff; /* White text for buttons */
+  color: #fff; /* White text for buttons */
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
@@ -157,7 +156,7 @@ h2 {
   border: 1px solid #ccc; /* Using a lighter gray for borders */
   padding: 20px;
   border-radius: 8px;
-  background-color: #ffffff; /* White background for cards */
+  background-color: #fff; /* White background for cards */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -183,7 +182,7 @@ h2 {
 
 .member-card p {
   margin: 5px 0;
-  color: #333333; /* Changed to darker gray for better visibility */
+  color: #333; /* Changed to darker gray for better visibility */
 }
 
 .member-card a {
