@@ -1,7 +1,7 @@
 // Fetch Weather Data
 async function fetchWeather() {
-  const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
-  const city = 'Harare'; // Replace with your chamber location
+  const apiKey = '387fa030745287010984d3faf7ae86ef'; // Your OpenWeatherMap API key
+  const city = 'Ruwa'; // Replace with your chamber location
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   try {
@@ -23,8 +23,11 @@ async function fetchWeather() {
 function displayWeather(data) {
   const weatherContainer = document.getElementById('weather-data');
   weatherContainer.innerHTML = `
+      <p>Location: ${data.name}</p>
       <p>Current Temperature: ${data.main.temp}°C</p>
       <p>Weather: ${data.weather[0].description}</p>
+      <p>Humidity: ${data.main.humidity}%</p>
+      <p>Wind Speed: ${data.wind.speed} m/s</p>
   `;
 }
 
