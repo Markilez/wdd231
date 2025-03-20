@@ -44,6 +44,12 @@ nav ul li a:hover {
   color: #fff; /* Light white for hover effect */
 }
 
+/* Logo Style */
+.logo {
+  max-width: 120px;
+  height: auto;
+}
+
 /* Main Content */
 main {
   max-width: 1200px;
@@ -136,7 +142,7 @@ h2 {
   border-radius: 4px;
   background-color: #007BFF; /* Button color */
   color: #fff; /* White text for buttons */
-  cursor: pointer;
+  cursor: button;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
