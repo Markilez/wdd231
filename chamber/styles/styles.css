@@ -44,16 +44,6 @@ nav ul li a:hover {
   color: #fff; /* Light white for hover effect */
 }
 
-/* Logo Style */
-.logo {
-  width: 100%; /* Ensure the logo scales proportionally */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 318px; /* Set max width based on expected size */
-  max-height: 216px; /* Set max height based on expected size */
-  display: block; /* Ensure it behaves as a block element */
-  margin: 0 auto; /* Center the logo horizontally */
-}
-
 /* Main Content */
 main {
   max-width: 1200px;
@@ -255,11 +245,6 @@ footer a:hover {
     margin-right: 0;
     margin-bottom: 15px;
   }
-
-  .logo {
-    max-width: 250px; /* Adjust for smaller screens */
-    max-height: 170px; /* Maintain aspect ratio */
-  }
 }
 
 @media (max-width: 480px) {
@@ -274,10 +259,5 @@ footer a:hover {
   #view-toggle button {
     width: 100%;
     margin-bottom: 10px;
-  }
-
-  .logo {
-    max-width: 200px; /* Further adjust for mobile screens */
-    max-height: 136px; /* Maintain aspect ratio */
   }
 }
