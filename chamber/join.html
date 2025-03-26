@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mosi A Tunya Chamber Of Commerce Membership Join Page for WDD 231">
+  <meta name="author" content="Maclarence Makomo">
+  <title>Join the Chamber | Mosi A Tunya Chamber Of Commerce</title>
+  
+  <!-- Preload key resources -->
+  <link rel="preload" href="images/logo.webp" as="image">
+  <link rel="preload" href="styles/normalize.css" as="style">
+  <link rel="preload" href="styles/styles.css" as="style">
+  
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="Join the Chamber | Mosi A Tunya Chamber of Commerce">
+  <meta property="og:site_name" content="Mosi A Tunya Chamber">
+  <meta property="og:url" content="https://markilez.github.io/wdd231/chamber/join.html">
+  <meta property="og:description" content="Join the Mosi A Tunya Chamber of Commerce and grow your business with our community.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://markilez.github.io/wdd231/chamber/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="site-branding">
+      <img src="images/logo.webp" alt="Chamber Logo" class="logo">
+      <p>Mosi A Tunya Chamber of Commerce</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Join the Chamber</h1>
+    <section id="membership-form">
+      <form action="thankyou.html" method="get">
+        <!-- Applicant Information -->
+        <label for="first-name">First Name:
+          <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+        </label>
+        <label for="last-name">Last Name:
+          <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+        </label>
+        <label for="title">Organizational Title:
+          <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+        </label>
+        <label for="email">Email:
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+        </label>
+        <label for="phone">Mobile Phone:
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </label>
+        <label for="business-name">Business/Organization Name:
+          <input type="text" id="business-name" name="business-name" required autocomplete="organization">
+        </label>
+
+        <!-- Membership Level -->
+        <label for="membership-level">Membership Level:
+          <select id="membership-level" name="membership-level" required>
+            <option value="np">NP Membership (Non-Profit)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <!-- Business Description -->
+        <label for="description">Business/Organization Description:
+          <textarea id="description" name="description" rows="5"></textarea>
+        </label>
+
+        <!-- Hidden Timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <!-- Membership Level Cards -->
+    <section id="membership-cards">
+      <div class="card" id="np-card">
+        <h3>NP Membership</h3>
+        <p>For non-profit organizations. No fee.</p>
+        <a href="#np-modal">Learn More</a>
+      </div>
+      <div class="card" id="bronze-card">
+        <h3>Bronze Membership</h3>
+        <p>Basic benefits for small businesses.</p>
+        <a href="#bronze-modal">Learn More</a>
+      </div>
+      <div class="card" id="silver-card">
+        <h3>Silver Membership</h3>
+        <p>Enhanced benefits for growing businesses.</p>
+        <a href="#silver-modal">Learn More</a>
+      </div>
+      <div class="card" id="gold-card">
+        <h3>Gold Membership</h3>
+        <p>Premium benefits for established businesses.</p>
+        <a href="#gold-modal">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Membership Level Modals -->
+    <div id="np-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>NP Membership Benefits</h3>
+        <ul>
+          <li>Access to community events</li>
+          <li>Networking opportunities</li>
+          <li>No membership fee</li>
+        </ul>
+      </div>
+    </div>
+    <div id="bronze-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Bronze Membership Benefits</h3>
+        <ul>
+          <li>All NP benefits</li>
+          <li>Discounted event tickets</li>
+          <li>Basic advertising opportunities</li>
+        </ul>
+      </div>
+    </div>
+    <div id="silver-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Silver Membership Benefits</h3>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Training workshops</li>
+          <li>Enhanced advertising opportunities</li>
+        </ul>
+      </div>
+    </div>
+    <div id="gold-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Gold Membership Benefits</h3>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Spotlight positions on the home page</li>
+          <li>Exclusive VIP events</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; <span id="copyright-year"></span> | Maclarence Makomo | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="scripts/script.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</body>
+</html>

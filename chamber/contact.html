@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mosi A Tunya Chamber Of Commerce Contact Page for WDD 231">
+  <meta name="author" content="Maclarence Makomo">
+  <title>Contact Us | Mosi A Tunya Chamber Of Commerce</title>
+  
+  <!-- Preload key resources -->
+  <link rel="preload" href="images/logo.webp" as="image">
+  <link rel="preload" href="styles/normalize.css" as="style">
+  <link rel="preload" href="styles/styles.css" as="style">
+  
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact Us | Mosi A Tunya Chamber of Commerce">
+  <meta property="og:site_name" content="Mosi A Tunya Chamber">
+  <meta property="og:url" content="https://markilez.github.io/wdd231/chamber/contact.html">
+  <meta property="og:description" content="Contact the Mosi A Tunya Chamber of Commerce for inquiries and support.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://markilez.github.io/wdd231/chamber/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="site-branding">
+      <img src="images/logo.webp" alt="Chamber Logo" class="logo">
+      <p>Mosi A Tunya Chamber of Commerce</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Contact Us</h1>
+    <section id="contact-info">
+      <h2>Our Office</h2>
+      <p><strong>Address:</strong> 123 Main Street, Harare, Zimbabwe</p>
+      <p><strong>Phone:</strong> +263 123 456 789</p>
+      <p><strong>Email:</strong> info@mosiatunya.co.zw</p>
+    </section>
+    <section id="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm">
+        <label for="name">Name:
+          <input type="text" id="name" name="name" required>
+        </label>
+        <label for="email">
+          <input type="email" id="email" name="email" required>
+        </label>
+        <label for="message">Message:
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; <span id="copyright-year"></span> | Maclarence Makomo | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="scripts/script.js" defer></script>
+  <script src="scripts/contact.js" defer></script>
+</body>
+</html>
