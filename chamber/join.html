@@ -38,7 +38,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -46,6 +46,7 @@
   <main>
     <h1>Join the Chamber</h1>
     <section id="membership-form">
+      <h2>Membership Application</h2>
       <form action="thankyou.html" method="get">
         <!-- Applicant Information -->
         <label for="first-name">First Name:
@@ -70,6 +71,7 @@
         <!-- Membership Level -->
         <label for="membership-level">Membership Level:
           <select id="membership-level" name="membership-level" required>
+            <option value="" disabled selected>Select a membership level</option>
             <option value="np">NP Membership (Non-Profit)</option>
             <option value="bronze">Bronze Membership</option>
             <option value="silver">Silver Membership</option>
@@ -92,6 +94,7 @@
 
     <!-- Membership Level Cards -->
     <section id="membership-cards">
+      <h2>Membership Levels</h2>
       <div class="card" id="np-card">
         <h3>NP Membership</h3>
         <p>For non-profit organizations. No fee.</p>
