@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #333;
+  }
+  
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #003366;
+    border-bottom: 2px solid #FF6600;
+    padding-bottom: 5px;
+  }
+  
+  ul, ol {
+    margin-left: 20px;
+  }
+  
+  footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Color Schema Examples */
+  .color-example {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .primary-color {
+    background-color: #003366;
+  }
+  
+  .secondary-color {
+    background-color: #F5F5F5;
+    border: 1px solid #333;
+  }
+  
+  .accent-color {
+    background-color: #FF6600;
+  }
+  
+  /* Typography Examples */
+  .typography-example {
+    margin-bottom: 10px;
+  }
+  
+  .primary-font {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .secondary-font {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .accent-font {
+    font-family: 'Lato', sans-serif;
+  }
+  
