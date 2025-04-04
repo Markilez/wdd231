@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Attraction One",
+        "address": "123 Main St, City, State",
+        "description": "Description of Attraction One.",
+        "image": "images/attraction1.webp"
+    },
+    {
+        "name": "Attraction Two",
+        "address": "456 Elm St, City, State",
+        "description": "Description of Attraction Two.",
+        "image": "images/attraction2.webp"
+    }
+    // Add more items as needed
+]
