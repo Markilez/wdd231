@@ -1,71 +1,40 @@
-// DOM Elements
-const memberContainer = document.getElementById("member-container");
-const gridViewButton = document.getElementById("grid-view");
-const listViewButton = document.getElementById("list-view");
+document.addEventListener('DOMContentLoaded', () => {
+    // Fetch the JSON data
+    fetch('items.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const attractionCardsContainer = document.getElementById('attraction-cards');
+            data.forEach(attraction => {
+                // Create card element
+                const card = document.createElement('div');
+                card.classList.add('card');
 
-// Fetch Members Data
-async function fetchMembers() {
-  try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log('Fetched members:', data); // Log the fetched data
-    return data;
-  } catch (error) {
-    console.error('Error fetching members data:', error);
-    return [];
-  }
-}
+                // Create content for the card
+                card.innerHTML = `
+                    <img src="${attraction.image}" alt="${attraction.name}" class="attraction-image">
+                    <h2>${attraction.name}</h2>
+                    <p>${attraction.address}</p>
+                    <p>${attraction.description}</p>
+                `;
 
-// Display Members
-async function displayMembers(view = "grid") {
-  const members = await fetchMembers();
-  memberContainer.innerHTML = ""; // Clear the container before adding new cards
+                // Append card to the container
+                attractionCardsContainer.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
 
-  members.forEach(member => {
-    const card = document.createElement("div");
-    card.classList.add("member-card");
+    // Set copyright year
+    const copyrightYear = new Date().getFullYear();
+    document.getElementById('copyright-year').textContent = copyrightYear;
 
-    // Add list-view class to the card if the view is "list"
-    if (view === "list") {
-      card.classList.add("list-view");
-    }
-
-    card.innerHTML = `
-      <img src="${member.image}" alt="${member.name}">
-      <div class="member-info">
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>Phone: ${member.phone}</p>
-        <p>Website: <a href="${member.website}" target="_blank">Visit</a></p>
-        <p>Membership Level: ${["Member", "Silver", "Gold"][member.membershipLevel - 1]}</p>
-      </div>
-    `;
-    memberContainer.appendChild(card);
-  });
-
-  // Add or remove list-view class from the container based on the view
-  if (view === "list") {
-    memberContainer.classList.add("list-view");
-  } else {
-    memberContainer.classList.remove("list-view");
-  }
-}
-
-// View Toggle Event Listeners
-gridViewButton.addEventListener("click", () => {
-  displayMembers("grid");
+    // Set last modified date
+    const lastModifiedDate = document.lastModified;
+    document.getElementById('last-modified').textContent = lastModifiedDate;
 });
-
-listViewButton.addEventListener("click", () => {
-  displayMembers("list");
-});
-
-// Footer Information
-document.getElementById("copyright-year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
-
-// Initial Load
-displayMembers();
