@@ -6,7 +6,7 @@
     <meta name="description" content="AutoCare Hub - Contact Us">
     <title>AutoCare Hub - Contact Us</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -24,7 +24,7 @@
     </header>
     <main>
         <h1>Contact Us</h1>
-        <form id="contact-form">
+        <form id="contact-form" onsubmit="handleFormSubmit(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" required>
             <label for="email">Email:</label>
@@ -38,6 +38,20 @@
         <p>© 2025 AutoCare Hub. All rights reserved.</p>
         <p><a href="attributions.html">Attributions</a></p>
     </footer>
-    <script src="scripts/main.js" type="module"></script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Store form data in localStorage
+            localStorage.setItem('contactForm', JSON.stringify({ name, email, message }));
+
+            // Redirect to form-action.html
+            window.location.href = 'form-action.html';
+        }
+    </script>
 </body>
 </html>
