@@ -1,0 +1,32 @@
+AutoCareHub/
+│
+├── index.html
+├── services.html
+├── contact.html
+├── about.html
+├── attributions.html
+├── form-action.html
+├── data/
+│   └── services.json
+├── images/
+│   ├── logo.png
+│   ├── car-repair.webp
+│   ├── customer1.webp
+│   ├── customer2.jpg
+│   ├── customer3.webp
+│   ├── oil-change.webp
+│   ├── tire-rotation.webp
+│   ├── brake-inspection.webp
+│   ├── battery-replacement.webp
+│   ├── engine-diagnostics.webp
+│   ├── engine-overhaul.webp
+│   ├── mechanic1.webp
+│   ├── mechanic2.webp
+│   ├── mechanic3.webp
+│   ├── garage1.webp
+│   ├── garage2.webp
+│   └── garage3.jpg
+├── styles/
+│   └── styles.css
+└── scripts/
+    └── main.js
