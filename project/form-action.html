@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="styles/styless.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AutoCare Hub</div>
+    </header>
+    <main>
+        <h1>Form Submission</h1>
+        <div id="form-data"></div>
+    </main>
+    <footer>
+        <p>© 2025 AutoCare Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        const formData = JSON.parse(localStorage.getItem('contactForm'));
+        if (formData) {
+            document.getElementById('form-data').innerHTML = `
+                <p>Name: ${formData.name}</p>
+                <p>Email: ${formData.email}</p>
+                <p>Message: ${formData.message}</p>
+            `;
+        } else {
+            document.getElementById('form-data').innerText = 'No data submitted.';
+        }
+    </script>
+</body>
+</html>
