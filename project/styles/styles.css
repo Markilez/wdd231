@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'YourFont';
+    src: url('yourfont.woff2') format('woff2');
+    font-display: swap; /* Prevent layout shifts */
+}
+
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -20,6 +26,7 @@ header {
 
 .logo img {
     height: 40px; /* Adjusted logo size */
+    width: 40px; /* Added width to avoid layout shifts */
     padding: 5px; /* Added padding for better spacing */
 }
 
@@ -67,6 +74,8 @@ nav ul li a {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    width: 600px; /* Set explicit width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Testimonials Section */

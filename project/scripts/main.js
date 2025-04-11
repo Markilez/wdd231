@@ -22,6 +22,7 @@ function loadTestimonials() {
     testimonials.forEach(testimonial => {
         const div = document.createElement('div');
         div.classList.add('testimonial');
+        div.style.width = '100%'; // Set a width to avoid shifts
 
         div.innerHTML = `
             <img src="${testimonial.image}" alt="${testimonial.name}" loading="lazy">
@@ -89,6 +90,7 @@ document.getElementById('contact-form')?.addEventListener('submit', function(eve
 
     this.reset(); // Reset the form fields
 });
+
 // Function to load the latest news dynamically
 function loadLatestNews() {
     const newsContainer = document.getElementById('latest-news-container');
