@@ -1,6 +1,3 @@
-// Import services from the JSON file
-import services from '../data/services.json' assert { type: 'json' };
-
 // Load testimonials and services dynamically when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     loadTestimonials();
@@ -21,7 +18,7 @@ function loadTestimonials() {
         console.error('Testimonial container not found!');
         return;
     }
-    
+
     testimonials.forEach(testimonial => {
         const div = document.createElement('div');
         div.classList.add('testimonial');
@@ -34,26 +31,42 @@ function loadTestimonials() {
     });
 }
 
-// Function to load services into the DOM
-function loadServices() {
+// Function to load services from the JSON file and update prices in the DOM
+async function loadServices() {
+    const serviceIds = {
+        "Brake Inspection": "brake-inspection-price",
+        "Battery Replacement": "battery-replacement-price",
+        "Engine Diagnostics": "engine-diagnostics-price",
+        "Engine Overhaul": "engine-overhaul-price",
+        "Tire Rotation": "tire-rotation-price",
+        "Oil Change": "oil-change-price"
+    };
+
     const container = document.getElementById('services-container');
     if (!container) {
         console.error('Services container not found!');
         return;
     }
 
-    services.forEach(service => {
-        const div = document.createElement('div');
-        div.classList.add('service-card');
+    try {
+        const response = await fetch('../data/services.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const services = await response.json();
 
-        div.innerHTML = `
-            <img src="${service.image}" alt="${service.name}" loading="lazy">
-            <h2>${service.name}</h2>
-            <p>${service.description}</p>
-            <p>Price: $${service.price.toFixed(2)}</p>
-        `;
-        container.appendChild(div);
-    });
+        services.forEach(service => {
+            const priceElementId = serviceIds[service.name];
+            if (priceElementId) {
+                const priceElement = document.getElementById(priceElementId);
+                if (priceElement) {
+                    priceElement.textContent = `$${service.price.toFixed(2)}`;
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error loading services:', error);
+    }
 }
 
 // Handle contact form submission
