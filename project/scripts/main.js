@@ -31,8 +31,18 @@ function loadTestimonials() {
     });
 }
 
-// Function to load services from the JSON file and update prices in the DOM
-async function loadServices() {
+// Hardcoded services data
+const services = [
+    { name: "Oil Change", price: 29.99 },
+    { name: "Brake Inspection", price: 89.99 },
+    { name: "Tire Rotation", price: 19.99 },
+    { name: "Engine Diagnostics", price: 49.99 },
+    { name: "Battery Replacement", price: 199.99 },
+    { name: "Engine Overhaul", price: 299.99 } // Added price for Engine Overhaul
+];
+
+// Function to load services into the DOM
+function loadServices() {
     const serviceIds = {
         "Brake Inspection": "brake-inspection-price",
         "Battery Replacement": "battery-replacement-price",
@@ -48,25 +58,15 @@ async function loadServices() {
         return;
     }
 
-    try {
-        const response = await fetch('../data/services.json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const services = await response.json();
-
-        services.forEach(service => {
-            const priceElementId = serviceIds[service.name];
-            if (priceElementId) {
-                const priceElement = document.getElementById(priceElementId);
-                if (priceElement) {
-                    priceElement.textContent = `$${service.price.toFixed(2)}`;
-                }
+    services.forEach(service => {
+        const priceElementId = serviceIds[service.name];
+        if (priceElementId) {
+            const priceElement = document.getElementById(priceElementId);
+            if (priceElement) {
+                priceElement.textContent = `$${service.price.toFixed(2)}`;
             }
-        });
-    } catch (error) {
-        console.error('Error loading services:', error);
-    }
+        }
+    });
 }
 
 // Handle contact form submission
@@ -89,3 +89,30 @@ document.getElementById('contact-form')?.addEventListener('submit', function(eve
 
     this.reset(); // Reset the form fields
 });
+// Function to load the latest news dynamically
+function loadLatestNews() {
+    const newsContainer = document.getElementById('latest-news-container');
+    if (!newsContainer) {
+        console.error('Latest news container not found!');
+        return;
+    }
+
+    // Example news articles
+    const newsArticles = [
+        { title: "New Service Launch", date: "2025-10-01", content: "We are excited to announce the launch of our new tire rotation service!" },
+        { title: "Customer Appreciation Day", date: "2025-09-15", content: "Join us for our Customer Appreciation Day on September 30th!" },
+        { title: "Winter Car Care Tips", date: "2025-09-10", content: "Get your car ready for winter with our top tips!" }
+    ];
+
+    newsArticles.forEach(article => {
+        const div = document.createElement('div');
+        div.classList.add('news-article');
+
+        div.innerHTML = `
+            <h3>${article.title}</h3>
+            <p><em>${article.date}</em></p>
+            <p>${article.content}</p>
+        `;
+        newsContainer.appendChild(div);
+    });
+}
