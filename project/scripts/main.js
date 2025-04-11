@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadServices();
 });
 
-console.log(services);
-
 // Testimonials data
 const testimonials = [
     { name: "Rodgers Mangena", text: "AutoCare Hub provided excellent service and my car runs like new!", image: "images/customer1.webp" },
