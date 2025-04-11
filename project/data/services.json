@@ -5,7 +5,7 @@
         "price": 29.99
     },
     {
-        "name": "Brake Repair",
+        "name": "Brake Inspection and Repair",
         "description": "Comprehensive brake inspection and repair services.",
         "price": 89.99
     },
@@ -15,12 +15,12 @@
         "price": 19.99
     },
     {
-        "name": "Diagnostic Services",
+        "name": "Engine Diagnostics",
         "description": "Advanced diagnostics to identify vehicle issues.",
         "price": 49.99
     },
     {
-        "name": "Custom Modifications",
+        "name": "Battery Replacement",
         "description": "Personalize your vehicle with custom modifications.",
         "price": 199.99
     }

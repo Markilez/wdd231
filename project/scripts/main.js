@@ -47,6 +47,7 @@ function loadServices() {
         div.classList.add('service-card');
 
         div.innerHTML = `
+            <img src="${service.image}" alt="${service.name}" loading="lazy">
             <h2>${service.name}</h2>
             <p>${service.description}</p>
             <p>Price: $${service.price.toFixed(2)}</p>
